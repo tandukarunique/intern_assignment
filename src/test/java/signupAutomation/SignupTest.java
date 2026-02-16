@@ -157,7 +157,7 @@ public class SignupTest {
                     Thread.sleep(500);
                 }
                 
-                // Character-by-character entry as fallback
+                // Character by character entry as fallback
                 enteredValue = otpField.getAttribute("value");
                 if (enteredValue == null || enteredValue.isEmpty() || !enteredValue.equals(otpCode)) {
                     System.out.println("Method 3: Entering character by character");
@@ -216,10 +216,10 @@ public class SignupTest {
                 // Check if verification was successful by looking for error messages
                 List<WebElement> errorMessages = driver.findElements(By.xpath("//*[contains(text(),'Please Enter Valid Code')]"));
                 if (errorMessages.size() > 0) {
-                    System.out.println("⚠️ Verification failed - 'Please Enter Valid Code' message is still showing");
+                    System.out.println(" Verification failed - 'Please Enter Valid Code' message is still showing");
                     return;
                 } else {
-                    System.out.println("✅ OTP verification completed successfully!");
+                    System.out.println(" OTP verification completed successfully!");
                 }
                 
             } catch (Exception e) {

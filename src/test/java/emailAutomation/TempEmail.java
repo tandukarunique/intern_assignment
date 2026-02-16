@@ -65,7 +65,7 @@ public class TempEmail {
                     js.executeScript("document.querySelectorAll('#email_list tr')[0].click();");
                     Thread.sleep(4000);
                     
-                    // The email body is in an IFRAME - switch to it
+                    
                     try {
                         WebElement emailFrame = emailDriver.findElement(By.id("emailFrame"));
                         emailDriver.switchTo().frame(emailFrame);
@@ -103,7 +103,7 @@ public class TempEmail {
                     }
                 }
 
-                System.out.println("Checking... (" + currentCount + " emails)");
+                System.out.println("Checking (" + currentCount + " emails)");
 
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
